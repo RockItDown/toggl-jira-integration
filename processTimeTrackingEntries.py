@@ -65,7 +65,7 @@ def read_configuration(config_file_name):
     # read configuration and exit if configuration options are missing
 
     config = configparser.ConfigParser()
-    config.read(config_file_name)
+    config.read(config_file_name, encoding="utf-8")
 
     try:
         configuration['jiraUser'] = config.get("Jira", "user")
